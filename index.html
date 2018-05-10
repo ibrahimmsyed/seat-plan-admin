@@ -37,35 +37,68 @@
         <img src="https://firebase.google.com/_static/90580fbce7/images/firebase/lockup.png" width="" height="30" class="d-inline-block align-top" alt="">
       </a>
     </nav>
+
     <div class="container">
-      <div class="row justify-content-md-center">
-        <form name=new_post>
-          <h2 class="text-center">Enter User Data</h2>
-          <div class="form-group">
-            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="a@a">
+      <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="seat-data-tab" data-toggle="tab" href="#main-data" role="tab" aria-controls="main-data" aria-selected="true">Assign Seat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="seat-data-tab" data-toggle="tab" href="#seat-data" role="tab" aria-controls="seat-data" aria-selected="false">Add Block Details</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="main-data" role="tabpanel" aria-labelledby="main-data">
+          <div class="row justify-content-md-center">
+            <form name=new_post class="form_profile">
+              <h2 class="text-center">Assign Seat To User</h2>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Select Floor</label>
+                </div>
+                <select class="custom-select floor-select" id="floor-value">
+                  <option selected>Choose...</option>
+                  
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" name="seat-value" id="seat-value" aria-describedby="seat-value" placeholder="Enter Seat Number" value="">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="a@a">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" id="username" placeholder="Enter username" value="a">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Upload DP</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" name="dp" id="dp">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary assign-user">Submit</button>
+            </form>
+            <img src="" alt="" class="rounded" id="image">
           </div>
-          <div class="form-group">
-            <input type="text" class="form-control" name="username" id="exampleInputPassword1" placeholder="Enter username" value="a">
+        </div>
+        <div class="tab-pane fade" id="seat-data" role="tabpanel" aria-labelledby="seat-data">
+          <div class="row justify-content-md-center">
+            <form name=new_post>
+              <h2 class="text-center">Enter Block Data</h2>
+              <div class="form-group">
+                <input type="number" class="form-control" name="floor-count" id="floor-count" aria-describedby="floor-count" placeholder="Enter Floor Count" value="">
+              </div>
+              <div class="form-group">
+                <input type="number" class="form-control" name="seat-count" id="seat-count" placeholder="Enter Seat Count" value="">
+              </div>
+              <button type="button" class="btn btn-primary submit-block">Submit</button>
+            </form>
           </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Upload DP</span>
-            </div>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" name="dp" id="dp">
-              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-
-        <img src="" alt="" class="rounded" id="image">
+        </div>
       </div>
-
-
-
-
-
     </div>
     
 
